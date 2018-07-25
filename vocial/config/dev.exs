@@ -51,9 +51,9 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :vocial, Vocial.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "vagrant",
-  password: "vagrant",
+  username: "postgres",
+  password: "postgres",
   database: "vocial_dev",
-  hostname: "192.168.33.10",
-  port: 5498,
+  hostname: "127.0.0.1",
+  port: 5433,
   pool_size: 10

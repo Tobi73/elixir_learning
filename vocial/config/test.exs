@@ -13,8 +13,8 @@ config :logger, level: :warn
 config :vocial, Vocial.Repo,
   adapter: Ecto.Adapters.Postgres,
   database: "vocial_test",
-  username: "vagrant",
-  password: "vagrant",
-  hostname: "192.168.33.10",
-  port: 5498,
+  username: "postgres",
+  password: "postgres",
+  hostname: "127.0.0.1",
+  port: 5433,
   pool: Ecto.Adapters.SQL.Sandbox

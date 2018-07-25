@@ -18,8 +18,12 @@ defmodule VocialWeb.Router do
 
     get "/", PageController, :index
 
-    resources "/polls", PollController, only: [:index, :new, :create]
+    resources "/polls", PollController, only: [:index, :new, :create, :show]
     resources "/users", UserController, only: [:new, :show, :create]
+    resources "/sessions", SessionController, only: [:create]
+    get "/options/:id/vote", PollController, :vote
+    get "/login", SessionController, :new
+    delete "/logout", SessionController, :delete
   end
 
   # Other scopes may use custom stacks.
